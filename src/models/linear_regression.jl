@@ -16,10 +16,10 @@ best for numerical reasons.
 function LinearRegression(; eltype=Float64, multi_output=nothing)
     if multi_output === nothing
         LinearRegression{Array{eltype}}()
-    elseif multi_ouput::Bool
-        LinearRegression{Array{eltype}, 2}()
+    elseif multi_output::Bool
+        LinearRegression{Array{eltype, 2}}()
     else
-        LinearRegression{Array{eltype}, 1}()
+        LinearRegression{Array{eltype, 1}}()
     end        
 end
 
